@@ -1,0 +1,98 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7.5vw;
+  background: white;
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 60px;
+
+  @media (max-width: 1500px) {
+    padding: 0 5vw;
+    padding-bottom: 30px;
+  }
+
+  p {
+    margin-top: 20px;
+    font-family: Garamond Premier Pro, serif;
+    font-size: 15px;
+    text-decoration: none;
+    @media (max-width: 1300px) {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+
+  .second-pic {
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+
+  .images .flex-col:first-child {
+    margin-right: 4vw;
+    position: relative;
+
+    @media (max-width: 700px) {
+      margin-right: 0;
+    }
+
+    .hero-text {
+      position: absolute;
+      width: 50%;
+      left: 25%;
+      top: 10%;
+    }
+  }
+
+  .animated {
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(10px);
+
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .flex-col img {
+    width: 100%;
+  }
+
+  .a-logos {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    justify-content: space-between;
+    grid-gap: 2vw;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 7vw 0;
+
+    @media (max-width: 700px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    img {
+      width: 100%;
+      flex: 1;
+      object-fit: contain;
+      transition: 0.3s;
+      filter: saturate(0);
+
+      @media (max-width: 700px) {
+        flex: 33%;
+        width: 33%;
+        max-width: 30%;
+        margin-top: 8px;
+      }
+
+      &:hover {
+        filter: saturate(1);
+      }
+    }
+  }
+}

@@ -1,0 +1,249 @@
+header {
+  height: 84px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 1000;
+
+  .header-wrap {
+    padding: 0 7.5vw;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    height: 84px;
+    width: 100%;
+    background: #5d5d5d;
+    box-sizing: border-box;
+    transition: 0.3s;
+
+    &.hidden {
+      transform: translateY(-100%);
+    }
+
+    @media (max-width: 1500px) {
+      padding: 0 5vw;
+    }
+
+    @media (max-width: 1300px) {
+      justify-content: space-between;
+    }
+  }
+  .logo {
+    margin-right: 25px;
+  }
+  .logo a {
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  // .mobile1 {
+  //   max-width: 24px;
+  //   width: 100%;
+  // }
+  .mobile {
+    display: none;
+    @media (max-width: 1300px) {
+      display: flex;
+    }
+
+    .bg {
+      overflow-y: scroll;
+      position: fixed;
+      top: 84px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: white;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 100px;
+
+      &.active {
+        display: flex;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a {
+          font-size: 17px;
+          margin-bottom: 30px;
+        }
+      }
+
+      .socials {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        margin-top: 36px;
+
+        svg {
+          filter: brightness(0);
+        }
+
+        .msg-links {
+          display: none;
+          position: absolute;
+          flex-direction: column;
+          z-index: 200;
+          top: 120%;
+          filter: drop-shadow(2px 5px 20px rgba(0, 0, 0, 0.08));
+
+          a {
+            background: white;
+            padding: 0 19px;
+            height: 35px;
+            transition: 0.3s;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            box-sizing: border-box;
+
+            &:hover {
+              background: black;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+    .line1,
+    .line2,
+    .line3 {
+      height: 2px;
+      width: 24px;
+      background: black;
+      transition: 0.3s;
+    }
+
+    .burger {
+      height: 14px;
+      width: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &.active {
+        .line2 {
+          opacity: 0;
+        }
+
+        .line1 {
+          transform: rotate(45deg) translateY(8px);
+        }
+
+        .line3 {
+          transform: rotate(-45deg) translateY(-8px);
+        }
+      }
+    }
+  }
+
+  .desktop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 1300px) {
+      display: none;
+    }
+  }
+
+  .socials {
+    display: flex;
+    align-items: center;
+
+    a {
+      font-family: Montserrat, sans-serif;
+      font-size: 17px;
+      text-decoration: none;
+      color: #ffffff;
+
+      @media (max-width: 1500px) {
+        font-size: 15px;
+      }
+    }
+
+    .phone {
+      margin-right: 0.5vw;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+
+      a:not(:last-child) {
+        margin-right: 1vw;
+      }
+
+      .msg-links {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        z-index: 200;
+        top: 100%;
+        filter: drop-shadow(2px 5px 20px rgba(0, 0, 0, 0.08));
+
+        a {
+          color: #000000;
+          background: white;
+          padding: 0 19px;
+          height: 35px;
+          transition: 0.3s;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          box-sizing: border-box;
+
+          &:hover {
+            background: black;
+            color: white;
+          }
+        }
+      }
+
+      svg {
+        filter: brightness(0);
+        transition: 0.3s;
+
+        &:hover {
+          filter: none;
+        }
+      }
+    }
+
+    @media (max-width: 1300px) {
+      font-size: 15px;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+
+    a {
+      text-transform: uppercase;
+      margin-right: 15px;
+      font-family: Montserrat, sans-serif;
+      color: #ffffff;
+      font-size: 17px;
+      text-decoration: none;
+      transition: 0.3s all;
+
+      @media (max-width: 1500px) {
+        font-size: 15px;
+      }
+    }
+    a:hover {
+      color: #2f3454;
+    }
+  }
+}

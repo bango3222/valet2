@@ -1,0 +1,148 @@
+a {
+  color: black;
+  font-family: Garamond Premier Pro, serif;
+  text-decoration: none;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+.flex-row{
+  display: flex;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, p, a, span {
+  margin: 0;
+  padding: 0;
+}
+
+body.active{
+  overflow: hidden;
+}
+
+.anchor{
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
+
+
+.content{
+  padding: 3.5vw 22vw 6vw 22vw;
+  position: relative;
+
+  @media (max-width: 1300px) {
+    padding: 40px 100px;
+  }
+
+  @media (max-width: 750px) {
+    padding: 20px;
+  }
+
+  .back{
+    position: absolute;
+    left: 10vw;
+    top: 100px;
+    display: flex;
+    @media (max-width: 1300px) {
+      top: 0;
+      left: 100px;
+      width: 30px;
+    }
+
+    @media (max-width: 750px) {
+      left: 20px;
+      width: 20px;
+    }
+  }
+
+
+
+  h1{
+    font-family: GraphikLCG, sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    margin-bottom: 80px;
+    @media (max-width: 1300px) {
+      font-size: 25px;
+    }
+
+    @media (max-width: 1300px) {
+      margin-top: 50px;
+    }
+  }
+
+  .text-block{
+    margin-bottom: 60px;
+
+    h2{
+      font-family: Montserrat,sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 30px;
+
+      @media (max-width: 1300px) {
+        font-size: 18px;
+      }
+
+    }
+
+    p{
+      font-family: GraphikLCG, sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+
+      @media (max-width: 1300px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  min-height: calc(100vh - 164px);
+  box-sizing: border-box;
+
+  &.success{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    h1{
+      font-family: GraphikLCG,sans-serif;
+      font-weight: 500;
+      font-size: 50px;
+      margin-bottom: 30px;
+
+      @media (max-width: 1300px) {
+        font-size: 30px;
+      }
+      @media (max-width: 750px) {
+        font-size: 20px;
+      }
+    }
+
+
+    h2{
+      font-family: GraphikLCG,sans-serif;
+      font-weight: 300;
+      font-size: 35px;
+      margin-bottom: 30px;
+
+      @media (max-width: 1300px) {
+        font-size: 20px;
+      }
+      @media (max-width: 750px) {
+        font-size: 15px;
+      }
+    }
+  }
+}

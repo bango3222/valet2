@@ -1,0 +1,13 @@
+.popup
+    .wrap
+        form.layout
+            h3 Страхование
+            input(type='text' placeholder='ТЕЛЕФОН ИЛИ E-MAIL').text-input
+            .accept-wrap.flex-row
+                .flex-row.check
+                    input(type='checkbox' id='accept').checkbox
+                    p Я соглашаюсь с
+                a(href='#') условиями обработки персональных данных
+            button(type='submit') ОТПРАВИТЬ
+            .close
+                include ../../../static/image/close.svg

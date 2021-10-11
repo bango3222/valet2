@@ -1,0 +1,27 @@
+.quotes {
+  padding: 8vw 14.7vw;
+  .q-img {
+    flex: 1;
+  }
+
+  img {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .quote {
+    margin-bottom: 40px;
+    flex: 1;
+    margin-bottom: 80px;
+
+    p {
+      margin-top: 3vw;
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+
+      @media (max-width: 1300px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
