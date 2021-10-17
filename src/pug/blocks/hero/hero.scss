@@ -2,20 +2,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 7.5vw;
+  margin-top: -84px;
   background: white;
   box-sizing: border-box;
   width: 100%;
   padding-bottom: 60px;
 
   @media (max-width: 1500px) {
-    padding: 0 5vw;
     padding-bottom: 30px;
   }
 
   p {
     margin-top: 20px;
-    font-family: Garamond Premier Pro, serif;
+    font-family: Montserrat, sans-serif;
     font-size: 15px;
     text-decoration: none;
     @media (max-width: 1300px) {
@@ -23,16 +22,18 @@
       text-align: center;
     }
   }
-
-  .second-pic {
-    @media (max-width: 700px) {
-      display: none;
-    }
-  }
-
-  .images .flex-col:first-child {
-    margin-right: 4vw;
+  .images {
     position: relative;
+    width: 100%;
+
+    @media (max-width: 1300px) {
+      height: 500px;
+    }
+
+    img{
+      object-fit: cover;
+      height: 100%;
+    }
 
     @media (max-width: 700px) {
       margin-right: 0;
@@ -40,9 +41,30 @@
 
     .hero-text {
       position: absolute;
-      width: 50%;
-      left: 25%;
-      top: 10%;
+      width: 30%;
+      left: 7.5vw;
+      bottom: 20%;
+
+      p{
+        color: white;
+        font-size: 40px;
+        font-family: Montserrat, sans-serif;
+        font-weight: 300;
+
+        @media (max-width: 1300px) {
+          font-size: 24px;
+          text-align: center;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 18px;
+          text-align: center;
+        }
+
+        &.bold{
+          font-weight: 500;
+        }
+      }
     }
   }
 
@@ -61,38 +83,4 @@
     width: 100%;
   }
 
-  .a-logos {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    justify-content: space-between;
-    grid-gap: 2vw;
-    align-items: center;
-    box-sizing: border-box;
-    margin: 7vw 0;
-
-    @media (max-width: 700px) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    img {
-      width: 100%;
-      flex: 1;
-      object-fit: contain;
-      transition: 0.3s;
-      filter: saturate(0);
-
-      @media (max-width: 700px) {
-        flex: 33%;
-        width: 33%;
-        max-width: 30%;
-        margin-top: 8px;
-      }
-
-      &:hover {
-        filter: saturate(1);
-      }
-    }
-  }
 }

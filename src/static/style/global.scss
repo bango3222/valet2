@@ -9,6 +9,11 @@ html, body{
   padding: 0;
 }
 
+body{
+  display: flex;
+  flex-direction: column;
+}
+
 .flex-row{
   display: flex;
 }
@@ -18,6 +23,17 @@ html, body{
   flex-direction: column;
 }
 
+.center{
+  align-items: center;
+}
+
+@media (max-width: 768px){
+
+  .sm-col{
+    flex-direction: column;
+  }
+}
+
 h1, h2, h3, h4, h5, p, a, span {
   margin: 0;
   padding: 0;
@@ -25,6 +41,10 @@ h1, h2, h3, h4, h5, p, a, span {
 
 body.active{
   overflow: hidden;
+
+  header{
+    background: white;
+  }
 }
 
 .anchor{

@@ -1,7 +1,15 @@
 .quotes2 {
   padding: 7vw 14vw;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
   @media (max-width: 1300px) {
     padding: 7vw 6vw;
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
   }
 
   .quote {
@@ -21,9 +29,7 @@
       margin-bottom: 40px;
     }
   }
-  .mg-bottom {
-    margin-bottom: 80px;
-  }
+
   .p-rate {
     align-items: center;
     margin-top: 1vw;
@@ -58,7 +64,6 @@
     font-weight: 800;
     font-size: 16px;
     margin-top: 10px;
-    margin-right: 5px;
 
     @media (max-width: 700px) {
       order: -1;

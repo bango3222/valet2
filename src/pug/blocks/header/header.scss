@@ -6,6 +6,10 @@ header {
   box-sizing: border-box;
   z-index: 1000;
 
+  .tan{
+    background: #2f3454;
+  }
+
   .header-wrap {
     padding: 0 7.5vw;
     display: flex;
@@ -13,7 +17,7 @@ header {
     // justify-content: space-between;
     height: 84px;
     width: 100%;
-    background: #5d5d5d;
+
     box-sizing: border-box;
     transition: 0.3s;
 
@@ -80,6 +84,7 @@ header {
         position: relative;
         justify-content: space-between;
         margin-top: 36px;
+
 
         svg {
           filter: brightness(0);
@@ -172,12 +177,16 @@ header {
     }
 
     .phone {
-      margin-right: 0.5vw;
+      margin-right: 3vw;
     }
 
     .icons {
       display: flex;
       align-items: center;
+
+      svg path{
+
+      }
 
       a:not(:last-child) {
         margin-right: 1vw;
@@ -212,8 +221,8 @@ header {
       }
 
       svg {
-        filter: brightness(0);
-        transition: 0.3s;
+        filter: brightness(15);
+        transition: 0.1s;
 
         &:hover {
           filter: none;
@@ -230,7 +239,7 @@ header {
     display: flex;
 
     a {
-      text-transform: uppercase;
+
       margin-right: 15px;
       font-family: Montserrat, sans-serif;
       color: #ffffff;

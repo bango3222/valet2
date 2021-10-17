@@ -1,27 +1,35 @@
-.quotes {
+.quotes{
   padding: 8vw 14.7vw;
-  .q-img {
-    flex: 1;
-  }
 
-  img {
+
+  img{
     width: auto;
     max-width: 100%;
   }
 
-  .quote {
+  .quote{
     margin-bottom: 40px;
-    flex: 1;
-    margin-bottom: 80px;
 
-    p {
-      margin-top: 3vw;
+
+
+    p{
+      margin-top: 1vw;
       font-family: Montserrat, sans-serif;
       font-size: 20px;
 
       @media (max-width: 1300px) {
         font-size: 14px;
       }
+    }
+  }
+
+  .quotes-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+
+    @media (max-width: 768px){
+      grid-template-columns: 1fr;
     }
   }
 }

@@ -1,6 +1,10 @@
 .max-1200px {
   padding: 8vw 14.7vw;
   background: rgba(223, 221, 209, 0.5);
+  
+  @media (max-width: 700px) {
+    padding: 0;
+  }
 }
 
 .places {
@@ -13,16 +17,31 @@
   }
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
+    gap: 0;
   }
+
   .card {
     overflow: hidden;
     position: relative;
     height: 22vw;
+
+    img {
+      filter: brightness(0.5);
+    }
+
     // padding-bottom: 80px;
     // display: flex;
     // flex-direction: column;
-    &:hover img {
-      transform: scale(1.02);
+    &:hover {
+      img {
+        transform: scale(1.01);
+        filter: brightness(1);
+      }
+
+      .text{
+        transform: translateY(15px);
+        opacity: 0;
+      }
     }
 
     @media (max-width: 700px) {
@@ -34,6 +53,7 @@
       transition: 0.5s;
       height: 100%;
       object-fit: cover;
+      width: 100%;
     }
 
     .text {
@@ -50,13 +70,16 @@
       flex-direction: column;
       z-index: 100;
       color: rgb(255, 255, 255);
+      transition: .3s;
+
       .text:hover {
         color: #2f3454;
       }
+
       h3 {
-        font-family: Garamond Premier Pro, serif;
-        font-weight: 400;
-        font-size: 20px;
+        font-family: Montserrat, sans-serif;
+        font-weight: 500;
+        font-size: 24px;
         text-transform: uppercase;
         letter-spacing: 0.25em;
         text-align: center;
@@ -70,8 +93,8 @@
       }
 
       p {
-        font-family: Garamond Premier Pro, serif;
-        font-weight: 400;
+        font-family: Montserrat, sans-serif;
+        font-weight: 300;
         font-size: 16px;
         text-transform: uppercase;
         letter-spacing: 0.25em;

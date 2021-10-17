@@ -1,57 +1,85 @@
-footer{
+.f-bg {
+  width: 100%;
+  object-fit: cover;
+}
 
-
+footer {
   background: black;
-  padding: 0 7.5vw;
+  padding: 50px 7.5vw;
   color: white;
   justify-content: space-between;
 
-  @media (max-width: 1500px) {
-    padding: 0 5vw;
+  .phone{
+    font-size: 17px;
+    font-weight: 500;
   }
 
-  .desktop{
+  .logo {
+    max-width: 140px;
+  }
+
+  .icons{
+    svg{
+      filter: brightness(100);
+      margin-top: 30px;
+      align-self: center;
+      transform: scale(.8);
+      margin-left: 15px;
+    }
+  }
+
+
+  @media (max-width: 1500px) {
+    padding: 40px 5vw;
+  }
+
+  .desktop {
     @media (max-width: 1300px) {
       display: none;
     }
     min-height: 80px;
     justify-content: space-between;
 
-    .info{
-      align-items: center;
-      gap: 2vw;
+    .info {
+      align-items: flex-start;
+      gap: 15px;
+      margin-left: 30px;
 
-      a{
+      a {
         color: white;
       }
 
       .lang {
         align-items: center;
-        a{
+
+        a {
           padding: .5vw;
-          &:first-child{
-            border-right:  1px solid white;
-            color: #2F3454 ;
+
+          &:first-child {
+            border-right: 1px solid white;
+            color: #2F3454;
           }
         }
       }
 
-      .payment{
-        gap: 1vw;
 
-        img{
-          width: 100%;
-          object-fit: contain;
-        }
+    }
+
+    .payment {
+      gap: 1vw;
+
+      img {
+        width: 40px;
+        object-fit: contain;
       }
     }
 
-    .store{
+    .store {
       gap: 1vw;
       align-items: center;
 
       @media (max-width: 1500px) {
-        img{
+        img {
           width: 6vw;
         }
 
@@ -60,15 +88,14 @@ footer{
   }
 
   p, a {
-    font-family: Montserrat,sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 12px;
     color: white;
   }
 
 
-
-  .mobile{
+  .mobile {
     display: none;
     padding: 40px 0;
     justify-content: space-between;
@@ -78,8 +105,8 @@ footer{
       align-items: center;
     }
 
-    .payment{
-      img{
+    .payment {
+      img {
         width: 50px;
         height: 30px;
         object-fit: contain;
@@ -87,15 +114,15 @@ footer{
       }
     }
 
-    .info{
+    .info {
       align-items: center;
 
       @media (max-width: 750px) {
         margin: 20px 0;
       }
 
-      .lang{
-        a:first-child{
+      .lang {
+        a:first-child {
           padding-right: 4px;
           border-right: 1px solid white;
           margin-right: 4px;
@@ -103,18 +130,16 @@ footer{
         }
       }
 
-      .link{
+      .link {
         margin-top: 10px;
       }
     }
 
     .third {
-      p{
+      p {
         margin-top: 10px;
       }
     }
-
-
 
 
     @media (max-width: 1300px) {

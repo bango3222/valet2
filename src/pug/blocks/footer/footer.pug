@@ -1,22 +1,35 @@
 footer
-    .desktop.flex-row
-        .info.flex-row
-            p © 2021 The VALET. Все права защищены
-            //.lang.flex-row
-            //    a Rus
-            //    a(href='#') Eng
-            a(href='#') Политика конфиденциальности
-            a(href='#') Часто задаваемые вопросы
+
+
+    .desktop.flex-row.center
+        .flex-row
+            .flex-col
+                img(src='image/hero-text.png' alt='logo').logo
+                .icons.flex-row
+
+                    a(href='#').msg
+                        include ./../../../static/image/msg.svg
+                    a(href='#')
+                        include ./../../../static/image/fb.svg
+                    a(href='#')
+                        include ./../../../static/image/inst.svg
+            .flex-col
+                .info.flex-col
+                    a(href="#").phone +7 (495) 255 24 25
+
+                    //.lang.flex-row
+                    //    a Rus
+                    //    a(href='#') Eng
+                    a(href='#') Политика конфиденциальности
+                    a(href='#') Часто задаваемые вопросы
+                    p © 2021 The VALET. Все права защищены
+        .flex-col
             .payment.flex-row
                 img(src='image/pay1.png' alt='PayU')
                 img(src='image/pay2.png' alt='MasterCard')
                 img(src='image/pay3.png' alt='Visa')
                 img(src='image/pay4.png' alt='МИР')
-        .store.flex-row
-            //- a(href="#")
-            //-     img(src='image/store1.png' alt='App Store')
-            //- a(href="#")
-            //-     img(src='image/store2.png' alt='Google Play')
+
     .mobile.flex-row
         .payment.flex-row
             img(src='image/pay1.png' alt='PayU')

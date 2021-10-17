@@ -45,7 +45,14 @@ $(document).ready(function (){
     $(document).scroll(function (){
         $('.header-wrap').addClass('hidden')
         if($('header').offset().top < 84 || oldOffset > $('header').offset().top) {
-            $('.header-wrap').removeClass('hidden')        }
+            $('.header-wrap').removeClass('hidden')
+        }
+
+        if($('header').offset().top < $('.hero').outerHeight()) {
+            $('.header-wrap').removeClass('tan')
+        } else {
+            $('.header-wrap').addClass('tan')
+        }
         oldOffset = $('header').offset().top
     })
 })
