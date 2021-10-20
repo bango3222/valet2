@@ -27,6 +27,14 @@ body{
   align-items: center;
 }
 
+.swiper-pagination-bullet{
+  min-height: 14px;
+  min-width: 14px;
+  max-width: 14px;
+  max-height: 14px;
+
+}
+
 @media (max-width: 768px){
 
   .sm-col{

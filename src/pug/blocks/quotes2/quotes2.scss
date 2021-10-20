@@ -13,7 +13,7 @@
   }
 
   .quote {
-    align-items: center;
+
     margin-bottom: 4vw;
 
     @media (max-width: 700px) {
@@ -26,7 +26,25 @@
 
     @media (max-width: 700px) {
       margin-left: 0;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+      justify-content: flex-start;
+    }
+  }
+
+  .photo{
+    height: 100px;
+    width: 100px;
+  }
+
+  .company{
+    margin-left: 16px;
+    object-fit: contain;
+
+    @media (max-width: 700px) {
+      margin-bottom: 10px;
+      height: 36px;
+      margin-left: 0;
+      width: fit-content;
     }
   }
 
@@ -36,8 +54,8 @@
     margin-bottom: 1vw;
 
     @media (max-width: 700px) {
-      order: -1;
-      align-self: center;
+
+      align-self: flex-start;
       margin-bottom: 10px;
       flex-direction: column;
     }
@@ -45,9 +63,6 @@
     img {
       margin-right: 8px;
 
-      @media (max-width: 700px) {
-        margin-bottom: 10px;
-      }
     }
   }
 
@@ -61,14 +76,14 @@
   }
 
   .p-name {
-    font-family: ObjectSans, sans-serif;
-    font-weight: 800;
-    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
     margin-top: 10px;
 
     @media (max-width: 700px) {
-      order: -1;
-      text-align: center;
+
+      text-align: left;
       margin-bottom: 10px;
     }
   }

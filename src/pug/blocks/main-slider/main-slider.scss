@@ -46,7 +46,7 @@
       height: 10%;
       text-transform: capitalize;
       font-family: Montserrat, sans-serif;
-      font-weight: 500;
+      font-weight: 900;
       font-size: 18px;
       text-decoration: none;
       letter-spacing: 0.05em;
@@ -65,6 +65,12 @@
       font-size: 18px;
       margin-bottom: 5px;
       list-style-type: none;
+      color: #8f8f8f;
+      transition: .3s;
+
+      &:hover{
+        color: black;
+      }
     }
 
     .line {
@@ -94,11 +100,7 @@
     display: flex;
     justify-content: space-between;
     margin: 0 2vw;
-    width: 1.5vw;
-
-    @media (max-width: 1500px) {
-      width: 50px;
-    }
+    width: 100px;
   }
 
   .navs {

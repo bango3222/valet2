@@ -21,7 +21,7 @@ $(document).ready(function () {
                 spaceBetween: 40,
                 allowTouchMove: false,
             },
-            1500: {
+            1800: {
                 slidesPerView: 4,
                 spaceBetween: 30,
             },

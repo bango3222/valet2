@@ -7,7 +7,13 @@ header {
   z-index: 1000;
 
   .tan{
-    background: #2f3454;
+    background: black;
+
+    .burger{
+      .line1, .line2, .line3{
+        background: white;
+      }
+    }
   }
 
   .header-wrap {
@@ -72,6 +78,7 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 50px;
 
         a {
           font-size: 17px;
@@ -237,22 +244,28 @@ header {
 
   .nav-links {
     display: flex;
+    width: 100%;
+    margin-left: 5vw;
 
     a {
 
-      margin-right: 15px;
       font-family: Montserrat, sans-serif;
       color: #ffffff;
       font-size: 17px;
       text-decoration: none;
       transition: 0.3s all;
+      flex-grow: 1;
+
+      &.phone{
+        margin: 0 2vw;
+      }
 
       @media (max-width: 1500px) {
         font-size: 15px;
       }
     }
     a:hover {
-      color: #2f3454;
+      color: #b3b3b3;
     }
   }
 }

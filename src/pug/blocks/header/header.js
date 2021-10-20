@@ -1,5 +1,5 @@
-$(document).ready(function (){
-    $('header .desktop .msg').mouseenter(function (){
+$(document).ready(function () {
+    $('header .desktop .msg').mouseenter(function () {
         $this_nav = $(this)
         $this_dropdown = $('header .desktop .msg-links')
         a = $this_nav.offset().left
@@ -8,22 +8,36 @@ $(document).ready(function (){
 
         $this_dropdown.fadeIn()
 
-        x = a + ((b-c) / 2)
+        x = a + ((b - c) / 2)
 
         $this_dropdown.css('display', 'flex')
-        $this_dropdown.offset({left : x})
+        $this_dropdown.offset({left: x})
     })
 
-    $('header').mouseleave(function (){
-        $('.desktop .msg-links').fadeOut()
+    $('header .msg').mouseleave(function () {
+        a = setTimeout(function () {
+            $('.desktop .msg-links').fadeOut()
+        }, 500)
+        $('header .desktop .msg').one('mouseenter', function () {
+            clearTimeout(a)
+        })
+        $('header .desktop .msg-links').one('mouseenter',function () {
+            clearTimeout(a)
+            $('header .desktop .msg-links').one('mouseleave', function () {
+                $('.desktop .msg-links').fadeOut()
+            })
+        })
     })
 
-    $('.burger, .mobile .links a').click(function (){
+
+
+
+    $('.burger, .mobile .links a').click(function () {
         $('body, .burger, .bg').toggleClass('active')
     })
 
 
-    $('header .mobile .msg').click(function (){
+    $('header .mobile .msg').click(function () {
         $this_nav = $(this).parent()
         $this_dropdown = $('header .mobile .msg-links')
         a = $this_nav.offset().left
@@ -32,23 +46,23 @@ $(document).ready(function (){
 
         $this_dropdown.fadeIn()
 
-        x1 = a + ((b-c) / 2)
+        x1 = a + ((b - c) / 2)
 
         $this_dropdown.css('display', 'flex')
-        $this_dropdown.offset({left : x1})
+        $this_dropdown.offset({left: x1})
     })
 
-    $('header').mouseenter(function (){
+    $('header').mouseenter(function () {
         $('.header-wrap').removeClass('hidden')
     })
     oldOffset = 0
-    $(document).scroll(function (){
+    $(document).scroll(function () {
         $('.header-wrap').addClass('hidden')
-        if($('header').offset().top < 84 || oldOffset > $('header').offset().top) {
+        if ($('header').offset().top < 84 || oldOffset > $('header').offset().top) {
             $('.header-wrap').removeClass('hidden')
         }
 
-        if($('header').offset().top < $('.hero').outerHeight()) {
+        if ($('header').offset().top < $('.hero').outerHeight()) {
             $('.header-wrap').removeClass('tan')
         } else {
             $('.header-wrap').addClass('tan')

@@ -11,14 +11,12 @@ $(document).ready(function (){
         autoplay: {
             delay: 800,
           },
-        pagination: {
-            el: ".pagination",
-            clickable: true,
-        },
+
         breakpoints: {
             700: {
                 slidesPerView: 3,
                 spaceBetween: 30,
+                pagination: false
             }
         },
     });
