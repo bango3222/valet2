@@ -24,7 +24,7 @@
     // box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     height: 34vw;
-    min-height: 600px;
+    min-height: 650px;
 
     @media (max-width: 1300px) {
       padding: 30px;
@@ -43,6 +43,7 @@
 
     h3 {
       padding: 1vw 0;
+      height: 10%;
       text-transform: capitalize;
       font-family: Montserrat, sans-serif;
       font-weight: 500;
@@ -81,10 +82,11 @@
     }
 
     .card-text {
-      height: 25%;
       font-family: Montserrat, sans-serif;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 18px;
+      margin-bottom: 5px;
+      list-style-type: none;
     }
   }
 
@@ -169,6 +171,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .button-card {
+    background: #f0f3f5;
+    color: black;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+  }
+  @media (max-width: 750px) {
+    .button-card {
+      font-size: 15px;
+    }
   }
 }
 

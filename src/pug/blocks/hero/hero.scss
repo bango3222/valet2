@@ -19,7 +19,6 @@
     text-decoration: none;
     @media (max-width: 1300px) {
       font-size: 12px;
-      text-align: center;
     }
   }
   .images {
@@ -30,7 +29,7 @@
       height: 500px;
     }
 
-    img{
+    img {
       object-fit: cover;
       height: 100%;
     }
@@ -45,7 +44,7 @@
       left: 7.5vw;
       bottom: 20%;
 
-      p{
+      p {
         color: white;
         font-size: 40px;
         font-family: Montserrat, sans-serif;
@@ -53,15 +52,13 @@
 
         @media (max-width: 1300px) {
           font-size: 24px;
-          text-align: center;
         }
 
         @media (max-width: 768px) {
           font-size: 18px;
-          text-align: center;
         }
 
-        &.bold{
+        &.bold {
           font-weight: 500;
         }
       }
@@ -82,5 +79,4 @@
   .flex-col img {
     width: 100%;
   }
-
 }
