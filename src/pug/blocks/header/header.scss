@@ -6,11 +6,13 @@ header {
   box-sizing: border-box;
   z-index: 1000;
 
-  .tan{
+  .tan {
     background: black;
 
-    .burger{
-      .line1, .line2, .line3{
+    .burger {
+      .line1,
+      .line2,
+      .line3 {
         background: white;
       }
     }
@@ -91,7 +93,6 @@ header {
         position: relative;
         justify-content: space-between;
         margin-top: 36px;
-
 
         svg {
           filter: brightness(0);
@@ -191,8 +192,7 @@ header {
       display: flex;
       align-items: center;
 
-      svg path{
-
+      svg path {
       }
 
       a:not(:last-child) {
@@ -244,11 +244,11 @@ header {
 
   .nav-links {
     display: flex;
+    align-items: center;
     width: 100%;
     margin-left: 5vw;
 
     a {
-
       font-family: Montserrat, sans-serif;
       color: #ffffff;
       font-size: 17px;
@@ -256,7 +256,7 @@ header {
       transition: 0.3s all;
       flex-grow: 1;
 
-      &.phone{
+      &.phone {
         margin: 0 2vw;
       }
 

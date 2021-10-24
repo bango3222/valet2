@@ -1,6 +1,7 @@
 .f-bg {
   width: 100%;
   object-fit: cover;
+  height: 83vh;
 }
 
 footer {
@@ -9,7 +10,7 @@ footer {
   color: white;
   justify-content: space-between;
 
-  .phone{
+  .phone {
     font-size: 17px;
     font-weight: 500;
   }
@@ -18,16 +19,15 @@ footer {
     max-width: 140px;
   }
 
-  .icons{
-    svg{
+  .icons {
+    svg {
       filter: brightness(100);
       margin-top: 30px;
       align-self: center;
-      transform: scale(.8);
+      transform: scale(0.8);
       margin-left: 15px;
     }
   }
-
 
   @media (max-width: 1500px) {
     padding: 40px 5vw;
@@ -53,16 +53,14 @@ footer {
         align-items: center;
 
         a {
-          padding: .5vw;
+          padding: 0.5vw;
 
           &:first-child {
             border-right: 1px solid white;
-            color: #2F3454;
+            color: #2f3454;
           }
         }
       }
-
-
     }
 
     .payment {
@@ -82,18 +80,17 @@ footer {
         img {
           width: 6vw;
         }
-
       }
     }
   }
 
-  p, a {
+  p,
+  a {
     font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 12px;
     color: white;
   }
-
 
   .mobile {
     display: none;
@@ -126,7 +123,7 @@ footer {
           padding-right: 4px;
           border-right: 1px solid white;
           margin-right: 4px;
-          color: #2F3454;
+          color: #2f3454;
         }
       }
 
@@ -140,7 +137,6 @@ footer {
         margin-top: 10px;
       }
     }
-
 
     @media (max-width: 1300px) {
       display: flex;

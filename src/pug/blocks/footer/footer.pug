@@ -4,7 +4,8 @@ footer
     .desktop.flex-row.center
         .flex-row
             .flex-row.center
-                img(src='image/hero-text.png' alt='logo').logo
+                a(href="/")
+                    include ./../../../static/image/the valet logo.svg
 
             .flex-col
                 .info.flex-col
@@ -18,17 +19,17 @@ footer
                     p © 2021 The VALET. Все права защищены
         .flex-col
             .payment.flex-row
-                img(src='image/pay1.png' alt='PayU')
-                img(src='image/pay2.png' alt='MasterCard')
-                img(src='image/pay3.png' alt='Visa')
-                img(src='image/pay4.png' alt='МИР')
+                include ./../../../static/image/pay1.svg
+                include ./../../../static/image/pay2.svg
+                include ./../../../static/image/pay3.svg
+                include ./../../../static/image/pay4.svg
 
     .mobile.flex-row
         .payment.flex-row
-            img(src='image/pay1.png' alt='PayU')
-            img(src='image/pay2.png' alt='MasterCard')
-            img(src='image/pay3.png' alt='Visa')
-            img(src='image/pay4.png' alt='МИР')
+            include ./../../../static/image/pay1.svg
+            include ./../../../static/image/pay2.svg
+            include ./../../../static/image/pay3.svg
+            include ./../../../static/image/pay4.svg
         .info.flex-col
             //.lang.flex-row
             //    a Rus
