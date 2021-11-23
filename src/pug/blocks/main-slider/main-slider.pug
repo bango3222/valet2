@@ -11,17 +11,20 @@
                     .card-text
                         p Очевидные причины не заниматься рутиной
                     ul.card-list
-                        li.card-list__option Паркинг
-                        li.card-list__option Заправка
-                        li.card-list__option Автомойка
-                        li.card-list__option Доставка
-                        li.card-list__option Хранение
-                        li.card-list__option Личный помощник
+                        input(id='option1' type='radio' class='mainSliderRadio' name='gr1')
+                        label(for='option1').card-list__option Паркинг
+                        input(id='option2' type='radio' class='mainSliderRadio' name='gr1')
+                        label(for='option2').card-list__option Заправка
+                        input(id='option3' type='radio' class='mainSliderRadio' name='gr1')
+                        label(for='option3').card-list__option Автомойка
+                        label(for='option4').card-list__option Доставка
+                        label(for='option5').card-list__option Хранение
+                        label(for='option6').card-list__option Личный помощник
                     //- .card-text
                     //-     p Очевидные причины не заниматься рутиной
 
                     .card-selector
-                        p Выберите услугу
+                        p Выбрать
                         //- include ../../../static/image/arrow.svg
 
 

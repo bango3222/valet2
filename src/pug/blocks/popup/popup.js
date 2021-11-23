@@ -1,6 +1,12 @@
 $(document).ready(function () {
-    $('body').on('click', '.selector-dropdown p', function () {
-        option = $(this).text()
+    $('.card-selector').click(function () {
+        $this_btn = $(this)
+        $card = $this_btn.parent()
+        $checked = $card.find('input:checked')
+        if($checked.length == 0){
+            return
+        }
+        option = $checked.next().text()
         $('.popup h3').text(option)
         $('body').css('overflow', 'hidden')
         $('.popup').fadeIn()
@@ -16,9 +22,9 @@ $(document).ready(function () {
         if ($('.accept-wrap .checkbox').is(':checked')) {
             $.ajax({
                 url: 'url', // сюда адрес api куда шлем
-                data: {
-                  phone: $('.popup .text-input').val(),
-                  service: $('.popup h3').text()
+                data:{
+                    phone: $('.popup .text-input').val(),
+                    service: $('.popup h3').text()
                 },
                 success: function (){
                     window.location.replace() //сюда url страницы успеха

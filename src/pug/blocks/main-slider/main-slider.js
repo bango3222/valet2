@@ -28,38 +28,13 @@ $(document).ready(function () {
         },
     });
 
-    tex = '<div class="selector-dropdown"></div>'
 
-    $('.card-selector').click(function (e) {
-        e.stopPropagation()
-        $('.selector-dropdown').remove()
+
+    $('.card-selector').click(function () {
         $this_btn = $(this)
-        $('body').append(tex)
-        $dropdown = $('.selector-dropdown')
-        $this_options = $this_btn.parent().find('.card-list__option')
-
-
-        $this_options.each(function () {
-            $dropdown.append('<p>' + $(this).text() + '</p>')
-        })
-
-        $(window).on('click',function() {
-            $('.selector-dropdown').remove()
-        });
-
-        $('.main-slider .swiper-wrapper').on('touchstart',function() {
-            $('.selector-dropdown').remove()
-        });
-
-
-        btn_left = $this_btn.offset().left
-        btn_top = $this_btn.offset().top - $dropdown.outerHeight() + $this_btn.outerHeight()
-        b = $this_btn.outerWidth()
-        $dropdown.css('display', 'flex')
-        $dropdown.css('width', b)
-        $dropdown.offset({left: btn_left})
-        $dropdown.offset({top: btn_top})
-
+        $card = $this_btn.parent()
+        $checked = $card.find('input:checked')
+        $cheked_label = $checked.next().text()
     })
 
 

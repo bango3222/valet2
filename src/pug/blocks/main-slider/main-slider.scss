@@ -59,9 +59,20 @@
     }
     ul {
       padding-left: 0;
+      display: flex;
+      flex-direction: column;
+
     }
 
-    li {
+    .mainSliderRadio{
+      display: none;
+
+      &:checked+label{
+        color: #8f2426;
+      }
+    }
+
+    label {
       font-family: Montserrat, sans-serif;
       font-weight: 400;
       font-size: 18px;
@@ -69,10 +80,13 @@
       list-style-type: none;
       color: #8f8f8f;
       transition: 0.3s;
+      cursor: pointer;
 
       &:hover {
         color: black;
       }
+
+
     }
 
     .line {
